@@ -1,0 +1,62 @@
+{
+    "-ORaf4FehjoSge4pUOcG" : {
+      "firebaseKey" : "-ORaf4FehjoSge4pUOcG",
+      "name" : "Pu'er City",
+      "location" : "Pu'er City, Yunnan Province, China",
+      "image": "https://media.gettyimages.com/id/479183004/photo/overlooking-the-city-of-puer-once-a-major-hub-on-the-tea.jpg?s=1024x1024&w=gi&k=20&c=tkrVA9XGRnSBwiLK7lILCeKPiPoGQPbBufAwHQ-zV_8="
+    },
+    "-ORaf4FehjoSge4pUOcH" : {
+      "firebaseKey" : "-ORaf4FehjoSge4pUOcH",
+      "name" : "Fuding City",
+      "location" : "Fuding, Ningde, Fujian, China",
+      "image": "https://www.shutterstock.com/image-photo/tashan-park-ningde-city-fujian-260nw-1945969456.jpg"
+    },
+    "-ORaf4FehjoSge4pUOcI" : {
+      "firebaseKey" : "-ORaf4FehjoSge4pUOcI",
+      "name" : "Uva Province",
+      "location" : "Uva Province, Sri Lanka",
+      "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0a/91/a9/b1/lipton-s-seat.jpg?w=300&h=-1&s=1"
+    },
+    "-ORaf4FfezGCw7esGJus" : {
+      "firebaseKey" : "-ORaf4FfezGCw7esGJus",
+      "name" : "Xinchang County",
+      "location" : "Xinchang County, Zhejiang, China",
+      "image": "https://subsites.chinadaily.com.cn/ezhejiang/shaoxing/att/20200313/1584083787511014975.jpg"
+    },
+    "-ORaf4FfezGCw7esGJut" : {
+      "firebaseKey" : "-ORaf4FfezGCw7esGJut",
+      "name" : "Feng Qing County",
+      "location" : "Feng Qing County, Lincang, China",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/5/52/%E5%87%A4%E5%BA%86%E5%A4%A9%E9%99%85%E7%BA%BF_-_%E8%88%AA%E6%8B%8D_-_2024-10-13_02.jpg"
+    },
+    "-ORaf4FfezGCw7esGJuu" : {
+      "firebaseKey" : "-ORaf4FfezGCw7esGJuu",
+      "name" : "Anxi County",
+      "location" : "Anxi County, Fujian, China",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-hF3lP3TZifhydhKWpc9k3nQ08O9KOhPKIg&s"
+    },
+    "-ORaf4FfezGCw7esGJuv" : {
+      "firebaseKey" : "-ORaf4FfezGCw7esGJuv",
+      "name" : "Nanping City",
+      "location" : "Nanping City, Fujian, China",
+      "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/d/dc/Very_crowded_buildings_-_panoramio.jpg/1200px-Very_crowded_buildings_-_panoramio.jpg"
+    },
+    "-ORaf4FfezGCw7esGJuw" : {
+      "firebaseKey" : "-ORaf4FfezGCw7esGJuw",
+      "name" : "Wuyi Mountains",
+      "location" : "Wuyi Mountains, Fujian, China",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT9jCctVK7QFXcWXjmAgKKM-aICKGuNyYiHtQ&s"
+    },
+    "-ORaf4FfezGCw7esGJux" : {
+      "firebaseKey" : "-ORaf4FfezGCw7esGJux",
+      "name" : "Kyoto City",
+      "location" : "Kyoto City, Kyoto Prefecture, Kansai Region, Japan",
+      "image": "https://lp-cms-production.imgix.net/2023-02/shutterstock_1017748444.jpg"
+    },
+     "-ORaf4Fg1bUqghQncHf0" : {
+      "firebaseKey" : "-ORaf4Fg1bUqghQncHf0",
+      "name" : "Ya'An",
+      "location" : "Ya'An, Sichuan, China",
+      "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/5b/4b/83/caption.jpg?w=1000&h=1000&s=1"
+    }
+  }
