@@ -39,7 +39,7 @@ function TeaForm({ obj = initialState }) {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (obj.firebaseKey) {
-      updateTea(formInput).then(() => router.push(`/tea/${obj.firebaseKey}`));
+      updateTea(formInput).then(() => router.push('/'));
     } else {
       console.log(formInput);
       createTea(formInput).then(({ name }) => {
@@ -66,8 +66,8 @@ function TeaForm({ obj = initialState }) {
       </FloatingLabel>
 
       {/* Type Select  */}
-      <Form.Select aria-label="Default select example" onChange={handleChange} required>
-        <option>Select a type</option>
+      <Form.Select aria-label="Type" name="type" onChange={handleChange} required>
+        <option value="">Select a type</option>
         <option value="White">White Tea</option>
         <option value="Green">Green Tea</option>
         <option value="Oolong">Oolong Tea</option>
@@ -76,8 +76,8 @@ function TeaForm({ obj = initialState }) {
       </Form.Select>
 
       {/* Region Select  */}
-      <Form.Select aria-label="Default select example" onChange={handleChange} required>
-        <option>Select a region</option>
+      <Form.Select aria-label="Region" name="region" onChange={handleChange} required>
+        <option value="">Select a region</option>
         {regions.map((region) => (
           <option value={region.firebaseKey} key={region.firebaseKey}>
             {region.name}
