@@ -4,9 +4,11 @@ import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { Image } from 'react-bootstrap';
 import { getSingleTea } from '../../../api/teaData';
+import { getSingleRegion } from '../../../api/regionData';
 
 export default function ViewTea({ params }) {
   const [teaDetails, setTeaDetails] = useState({});
+  const [regionDetails, setRegionDetails] = useState({});
 
   const { firebaseKey } = params;
 
@@ -14,8 +16,13 @@ export default function ViewTea({ params }) {
     getSingleTea(firebaseKey).then(setTeaDetails);
   };
 
+  const getRegionDetails = () => {
+    getSingleRegion(teaDetails.region).then(setRegionDetails);
+  };
+
   useEffect(() => {
     getCauseDetails();
+    getRegionDetails();
   }, []);
 
   return (
@@ -28,6 +35,7 @@ export default function ViewTea({ params }) {
         <div>
           <h1>{teaDetails.name}</h1>
           <p>{teaDetails.description || ''}</p>
+          <p>{regionDetails.name}</p>
         </div>
       </div>
     </div>
