@@ -12,17 +12,15 @@ export default function ViewTea({ params }) {
 
   const { firebaseKey } = params;
 
-  const getCauseDetails = () => {
-    getSingleTea(firebaseKey).then(setTeaDetails);
-  };
-
-  const getRegionDetails = () => {
-    getSingleRegion(teaDetails.region).then(setRegionDetails);
+  const getDetails = () => {
+    getSingleTea(firebaseKey).then((teaObj) => {
+      setTeaDetails(teaObj);
+      getSingleRegion(teaObj.region).then(setRegionDetails);
+    });
   };
 
   useEffect(() => {
-    getCauseDetails();
-    getRegionDetails();
+    getDetails();
   }, []);
 
   return (
@@ -34,7 +32,6 @@ export default function ViewTea({ params }) {
         {/* Tea Details */}
         <div>
           <h1>{teaDetails.name}</h1>
-          <p>{teaDetails.description || ''}</p>
           <p>{regionDetails.name}</p>
         </div>
       </div>
