@@ -42,7 +42,8 @@ function TeaForm({ obj = initialState }) {
       updateTea(formInput).then(() => router.push('/'));
     } else {
       console.log(formInput);
-      createTea(formInput).then(({ name }) => {
+      const payload = { ...formInput, uid: user.uid };
+      createTea(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateTea(patchPayload).then(() => {
           router.push('/');
