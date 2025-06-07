@@ -3,7 +3,7 @@
 import PropTypes from 'prop-types';
 import { useEffect, useState } from 'react';
 import { Image } from 'react-bootstrap';
-import { getSingleTea } from '../../../api/teaData';
+import { getSingleTea, deleteSingleTea } from '../../../api/teaData';
 import { getSingleRegion } from '../../../api/regionData';
 
 export default function ViewTea({ params }) {
@@ -33,6 +33,21 @@ export default function ViewTea({ params }) {
         <div>
           <h1>{teaDetails.name}</h1>
           <p>{regionDetails.name}</p>
+        </div>
+
+        {/* Tea Links */}
+        <div>
+          <a href={`/tea/edit/${firebaseKey}`}>Edit Link</a>
+        </div>
+        <div>
+          <a
+            href="/tea"
+            onClick={() => {
+              deleteSingleTea(firebaseKey);
+            }}
+          >
+            Delete Tea
+          </a>
         </div>
       </div>
     </div>
