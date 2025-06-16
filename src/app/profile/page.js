@@ -37,6 +37,7 @@ export default function ViewProfile() {
         <div className="region-cards">
           <div className="d-flex align-items-center">
             <h2>My Teas</h2>
+            <a href={`/teas/new`}>Add New Tea</a>
           </div>
           <div className="d-flex flex-wrap">
             {teas.map((tea) => (
