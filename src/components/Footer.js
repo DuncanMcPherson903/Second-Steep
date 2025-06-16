@@ -8,7 +8,7 @@ export default function Footer() {
           <Col className="mx-5">
             <Stack>
               <Image src="/images/LogoTemp.jpg" alt="VM logo" rounded width={150} height={150} />
-              <Image src="/images/LogoTextBlack.png" alt="VM logo" rounded width={150} height={50} />
+              <Image src="/images/LogoTextWhite.png" alt="VM logo" rounded width={150} height={50} />
             </Stack>
           </Col>
           <Col>

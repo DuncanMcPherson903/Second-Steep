@@ -3,22 +3,17 @@
 'use client';
 
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
-import { Button } from 'react-bootstrap';
-import { getTeas } from '../api/teaData';
+import { getAllTeas } from '../api/teaData';
 import { getRegions } from '../api/regionData';
 import TeaCard from '../components/TeaCard';
 import RegionCard from '../components/RegionCard';
-import { useAuth } from '../utils/context/authContext';
 
 function Home() {
   const [teas, setTeas] = useState([]);
   const [regions, setRegions] = useState([]);
 
-  const { user } = useAuth();
-
   const getAllTheTeas = () => {
-    getTeas(user.uid).then(setTeas);
+    getAllTeas().then(setTeas);
   };
 
   const getAllTheRegions = () => {
@@ -32,15 +27,12 @@ function Home() {
 
   return (
     <div className="text-center my-4">
-      <Link href="/tea/new" passHref>
-        <Button>Add A Tea</Button>
-      </Link>
-      <div className="d-flex flex-wrap">
+      <div className="tea-cards d-flex flex-wrap">
         {teas.map((tea) => (
           <TeaCard key={tea.firebaseKey} teaObj={tea} onUpdate={getAllTheTeas} />
         ))}
       </div>
-      <div className="d-flex flex-wrap">
+      <div className="region-cards d-flex flex-wrap">
         {regions.map((region) => (
           <RegionCard key={region.firebaseKey} regionObj={region} onUpdate={getAllTheRegions} />
         ))}
