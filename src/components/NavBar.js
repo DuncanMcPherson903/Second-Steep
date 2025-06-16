@@ -21,8 +21,8 @@ export default function NavBar() {
             <Link className="nav-link" href="/regions">
               Regions
             </Link>
-            <Link className="nav-link" href="/regions">
-              Regions
+            <Link className="nav-link" href="/profile">
+              Profile
             </Link>
             <Link className="nav-link" href="/testing">
               Testing

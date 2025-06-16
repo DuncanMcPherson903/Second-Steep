@@ -46,7 +46,7 @@ function TeaForm({ obj = initialState }) {
       createTea(payload).then(({ name }) => {
         const patchPayload = { firebaseKey: name };
         updateTea(patchPayload).then(() => {
-          router.push('/');
+          router.push('/teas');
         });
       });
     }
@@ -69,11 +69,11 @@ function TeaForm({ obj = initialState }) {
       {/* Type Select  */}
       <Form.Select aria-label="Type" name="type" onChange={handleChange} required>
         <option value="">Select a type</option>
-        <option value="White">White Tea</option>
-        <option value="Green">Green Tea</option>
-        <option value="Oolong">Oolong Tea</option>
-        <option value="Black">Black Tea</option>
-        <option value="Puer">Puer Tea</option>
+        <option value="white">White Tea</option>
+        <option value="green">Green Tea</option>
+        <option value="brown">Oolong Tea</option>
+        <option value="black">Black Tea</option>
+        <option value="grey">Puer Tea</option>
       </Form.Select>
 
       {/* Region Select  */}

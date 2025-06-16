@@ -25,7 +25,7 @@ function ClientProvider({ children }) {
     <AuthProvider>
       {/* ViewDirectorBasedOnUserAuthStatus determines the view based on the user's authentication state */}
       <ViewDirectorBasedOnUserAuthStatus>
-        <div className="container">{children}</div>
+        <div>{children}</div>
       </ViewDirectorBasedOnUserAuthStatus>
     </AuthProvider>
   );

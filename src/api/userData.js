@@ -2,47 +2,9 @@ import { clientCredentials } from '../utils/client';
 
 const endpoint = clientCredentials.databaseURL;
 
-const getTeasByUid = (uid) =>
+const createUser = (payload) =>
   new Promise((resolve, reject) => {
-    fetch(`${endpoint}/teas.json?orderBy="uid"&equalTo="${uid}"`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data) {
-          resolve(Object.values(data));
-        } else {
-          resolve([]);
-        }
-      })
-      .catch(reject);
-  });
-
-const getAllTeas = () =>
-  new Promise((resolve, reject) => {
-    fetch(`${endpoint}/teas.json`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    })
-      .then((response) => response.json())
-      .then((data) => {
-        if (data) {
-          resolve(Object.values(data));
-        } else {
-          resolve([]);
-        }
-      })
-      .catch(reject);
-  });
-
-const createTea = (payload) =>
-  new Promise((resolve, reject) => {
-    fetch(`${endpoint}/teas.json`, {
+    fetch(`${endpoint}/users.json`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -54,9 +16,10 @@ const createTea = (payload) =>
       .catch(reject);
   });
 
-const getSingleTea = (firebaseKey) =>
+const getSingleUser = (uid) =>
   new Promise((resolve, reject) => {
-    fetch(`${endpoint}/teas/${firebaseKey}.json`, {
+    console.log(uid);
+    fetch(`${endpoint}/users/${uid}.json`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
@@ -67,9 +30,23 @@ const getSingleTea = (firebaseKey) =>
       .catch(reject);
   });
 
-const deleteSingleTea = (firebaseKey) =>
+const getAllUsers = () =>
   new Promise((resolve, reject) => {
-    fetch(`${endpoint}/teas/${firebaseKey}.json`, {
+    console.log('API call for getAllUsers');
+    fetch(`${endpoint}/users.json`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    })
+      .then((response) => response.json())
+      .then((data) => resolve(data))
+      .catch(reject);
+  });
+
+const deleteSingleUser = (firebaseKey) =>
+  new Promise((resolve, reject) => {
+    fetch(`${endpoint}/users/${firebaseKey}.json`, {
       method: 'DELETE',
       headers: {
         'Content-Type': 'application/json',
@@ -80,9 +57,9 @@ const deleteSingleTea = (firebaseKey) =>
       .catch(reject);
   });
 
-const updateTea = (payload) =>
+const updateUser = (payload) =>
   new Promise((resolve, reject) => {
-    fetch(`${endpoint}/teas/${payload.firebaseKey}.json`, {
+    fetch(`${endpoint}/users/${payload.firebaseKey}.json`, {
       method: 'PATCH',
       headers: {
         'Content-Type': 'application/json',
@@ -94,4 +71,4 @@ const updateTea = (payload) =>
       .catch(reject);
   });
 
-export { getTeasByUid, createTea, getSingleTea, deleteSingleTea, updateTea, getAllTeas };
+export { createUser, getSingleUser, deleteSingleUser, updateUser, getAllUsers };

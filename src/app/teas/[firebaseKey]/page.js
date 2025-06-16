@@ -25,9 +25,9 @@ export default function ViewTea({ params }) {
 
   return (
     <div>
-      <div className="org-container">
+      <div className="tea-container">
         {/* Tea Image */}
-        <div>{teaDetails.image && <Image src={teaDetails.image} alt={teaDetails.name || 'Tea'} wfirebaseKeyth={400} height={300} style={{ objectFit: 'cover' }} />}</div>
+        <div>{teaDetails.image && <Image src={teaDetails.image} alt={teaDetails.name || 'Tea'} width={400} height={300} style={{ objectFit: 'cover' }} />}</div>
 
         {/* Tea Details */}
         <div>
@@ -37,11 +37,11 @@ export default function ViewTea({ params }) {
 
         {/* Tea Links */}
         <div>
-          <a href={`/tea/edit/${firebaseKey}`}>Edit Link</a>
+          <a href={`/teas/edit/${firebaseKey}`}>Edit Link</a>
         </div>
         <div>
           <a
-            href="/tea"
+            href="/teas"
             onClick={() => {
               deleteSingleTea(firebaseKey);
             }}
