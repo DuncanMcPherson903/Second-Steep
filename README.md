@@ -25,6 +25,6 @@ This app is for tea enthusiasts who wish to document their tea journeys, find ne
 - [Project Board](https://github.com/users/DuncanMcPherson903/projects/3)
 - [Loom video walkthrough](https://www.loom.com/share/8c5d3bd472a64445bbcf5c790c7f44b2?sid=4a66e304-71a9-4eed-9426-8348b48f0988)
 
-#### Constributers
+#### Contributers
 
 [Duncan McPherson](https://github.com/DuncanMcPherson903)
